@@ -5,9 +5,11 @@
     "es2021": true
   },
   "extends": [
-    "plugin:react/recommended",
     "airbnb",
-    "plugin:prettier/recommended"
+    "plugin:react/recommended",
+    "plugin:node/recommended",
+    "plugin:prettier/recommended",
+    "prettier"
   ],
   "parserOptions": {
     "ecmaFeatures": {
@@ -20,6 +22,7 @@
     "no-debugger": 0,
     "no-alert": 0,
     "no-await-in-loop": 0,
+    "no-process-exit": 0,
     "no-return-assign": ["error", "except-parens"],
     "no-restricted-syntax": [
       2,
@@ -105,6 +108,13 @@
       "warn",
       {
         "aspects": ["invalidHref"]
+      }
+    ],
+    "node/no-unsupported-features/es-syntax": [
+      "warn",
+      {
+        "version": ">=10.0.0",
+        "ignores": []
       }
     ],
     "@typescript-eslint/comma-dangle": ["off"],
